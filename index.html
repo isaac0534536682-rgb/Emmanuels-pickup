@@ -3,59 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmanuel's Pickup | Delivery Services</title>
+
+  <title>Emmanuel's Pickup | Pickup & Delivery in Greater Accra</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #f5f5f5;
+      background: #f5f6f8;
       color: #222;
+      line-height: 1.6;
     }
 
     header {
       background: #111;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 32px;
+      font-size: 25px;
     }
 
-    header p {
-      margin: 8px 0 0;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
     }
 
     .hero {
-      background: white;
-      padding: 60px 20px;
+      background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+      url("https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
       text-align: center;
+      padding: 110px 20px;
     }
 
     .hero h2 {
-      font-size: 38px;
+      font-size: 48px;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 18px;
-      max-width: 650px;
+      max-width: 700px;
       margin: auto;
-      line-height: 1.6;
+      font-size: 19px;
     }
 
     .buttons {
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
-    .button {
+    .btn {
       display: inline-block;
-      padding: 14px 22px;
-      margin: 8px;
-      border-radius: 8px;
+      padding: 14px 25px;
+      margin: 7px;
+      border-radius: 7px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -66,74 +81,144 @@
     }
 
     .call {
-      background: #111;
-      color: white;
+      background: white;
+      color: #111;
     }
 
-    .section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    section {
+      padding: 60px 7%;
     }
 
-    .section h2 {
+    .title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
+    }
+
+    .title h2 {
+      font-size: 32px;
+    }
+
+    .title p {
+      color: #666;
     }
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 22px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .card {
       background: white;
-      padding: 25px;
+      padding: 30px 22px;
       border-radius: 12px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 12px;
     }
 
     .card h3 {
-      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .booking {
+      background: white;
     }
 
     form {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
+      background: #f7f7f7;
+      padding: 30px;
+      border-radius: 12px;
     }
 
-    input, textarea, select {
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+
+    input,
+    textarea {
       width: 100%;
-      padding: 12px;
-      margin: 8px 0 15px;
-      box-sizing: border-box;
+      padding: 13px;
+      margin-top: 6px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
     }
 
     button {
       width: 100%;
-      padding: 14px;
+      margin-top: 20px;
+      padding: 15px;
+      border: none;
+      border-radius: 7px;
       background: #25D366;
       color: white;
-      border: none;
-      border-radius: 6px;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
+    }
+
+    .area {
+      text-align: center;
+    }
+
+    .area-box {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
     }
 
     footer {
       background: #111;
       color: white;
       text-align: center;
-      padding: 25px;
-      margin-top: 40px;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: #25D366;
+      text-decoration: none;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        text-align: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 80px 20px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      section {
+        padding: 45px 5%;
+      }
     }
   </style>
 </head>
@@ -141,79 +226,170 @@
 <body>
 
 <header>
-  <h1>Emmanuel's Pickup</h1>
-  <p>Reliable Pickup & Delivery Services in Greater Accra</p>
+  <h1>🚚 Emmanuel's Pickup</h1>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#booking">Book</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h2>Need Something Delivered?</h2>
+  <h2>Reliable Pickup & Delivery</h2>
 
   <p>
-    Emmanuel's Pickup helps you transport goods, loads and other items
-    safely and conveniently to locations across the Greater Accra Region.
+    Moving goods or loads within Greater Accra?
+    Emmanuel's Pickup is ready to help transport your items safely and conveniently.
   </p>
 
   <div class="buttons">
-    <a class="button whatsapp"
+    <a class="btn whatsapp"
        href="https://wa.me/233257522922"
        target="_blank">
-       WhatsApp Us
+      💬 WhatsApp Us
     </a>
 
-    <a class="button call"
+    <a class="btn call"
        href="tel:+233257522922">
-       Call Us
+      📞 Call Now
     </a>
   </div>
 </section>
 
-<section class="section">
-  <h2>Our Services</h2>
+<section id="services">
+  <div class="title">
+    <h2>Our Services</h2>
+    <p>Simple and convenient transportation solutions.</p>
+  </div>
 
   <div class="services">
 
     <div class="card">
-      <h3>🚚 Pickup & Delivery</h3>
-      <p>We pick up your goods and deliver them to your destination.</p>
+      <div class="icon">🚚</div>
+      <h3>Pickup & Delivery</h3>
+      <p>
+        We pick up your goods and deliver them to your chosen destination.
+      </p>
     </div>
 
     <div class="card">
-      <h3>📦 Load Transportation</h3>
-      <p>Transporting different types of loads around Greater Accra.</p>
+      <div class="icon">📦</div>
+      <h3>Load Transportation</h3>
+      <p>
+        Transport your loads conveniently around Greater Accra.
+      </p>
     </div>
 
     <div class="card">
-      <h3>📍 Local Delivery</h3>
-      <p>Convenient transportation between locations within Greater Accra.</p>
+      <div class="icon">📍</div>
+      <h3>Local Transport</h3>
+      <p>
+        Reliable transportation between locations within Greater Accra.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Easy Booking</h3>
+      <p>
+        Send your delivery details directly through WhatsApp.
+      </p>
     </div>
 
   </div>
 </section>
 
-<section class="section">
-  <h2>Request a Delivery</h2>
+<section class="area">
+  <div class="title">
+    <h2>Serving Greater Accra</h2>
+  </div>
+
+  <div class="area-box">
+    <p>
+      📍 We provide pickup and transportation services
+      across the Greater Accra Region.
+    </p>
+
+    <p style="margin-top:15px;">
+      Contact us with your pickup location, destination,
+      and type of load to request a quote.
+    </p>
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <div class="title">
+    <h2>Request a Quote</h2>
+    <p>Fill in your details and send your request through WhatsApp.</p>
+  </div>
 
   <form onsubmit="sendWhatsApp(); return false;">
 
     <label>Your Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
+    <input
+      type="text"
+      id="name"
+      placeholder="Enter your name"
+      required
+    >
 
     <label>Pickup Location</label>
-    <input type="text" id="pickup" placeholder="Where should we pick up?" required>
+    <input
+      type="text"
+      id="pickup"
+      placeholder="Where should we pick up?"
+      required
+    >
 
-    <label>Delivery Location</label>
-    <input type="text" id="delivery" placeholder="Where should we deliver?" required>
+    <label>Destination</label>
+    <input
+      type="text"
+      id="destination"
+      placeholder="Where should we deliver?"
+      required
+    >
 
     <label>Type of Load</label>
-    <input type="text" id="load" placeholder="What are you transporting?" required>
+    <input
+      type="text"
+      id="load"
+      placeholder="What are you transporting?"
+      required
+    >
 
     <label>Additional Information</label>
-    <textarea id="message" rows="4"
-      placeholder="Any additional information?"></textarea>
+    <textarea
+      id="message"
+      rows="4"
+      placeholder="Tell us anything else we should know">
+    </textarea>
 
-    <button type="submit">Request Delivery on WhatsApp</button>
+    <button type="submit">
+      💬 Send Request on WhatsApp
+    </button>
 
   </form>
+</section>
+
+<section id="contact">
+  <div class="title">
+    <h2>Contact Emmanuel's Pickup</h2>
+  </div>
+
+  <div class="area-box" style="text-align:center;">
+    <p>📱 WhatsApp: 025 752 2922</p>
+    <p>📞 Phone: 025 752 2922</p>
+
+    <div class="buttons">
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/233257522922"
+        target="_blank">
+        Chat on WhatsApp
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -226,17 +402,18 @@
 
     const name = document.getElementById("name").value;
     const pickup = document.getElementById("pickup").value;
-    const delivery = document.getElementById("delivery").value;
+    const destination = document.getElementById("destination").value;
     const load = document.getElementById("load").value;
     const message = document.getElementById("message").value;
 
     const text =
       "Hello Emmanuel's Pickup!%0A%0A" +
-      "Name: " + name + "%0A" +
-      "Pickup Location: " + pickup + "%0A" +
-      "Delivery Location: " + delivery + "%0A" +
-      "Load: " + load + "%0A" +
-      "Additional Information: " + message;
+      "I would like to request a delivery quote.%0A%0A" +
+      "Name: " + encodeURIComponent(name) + "%0A" +
+      "Pickup: " + encodeURIComponent(pickup) + "%0A" +
+      "Destination: " + encodeURIComponent(destination) + "%0A" +
+      "Load: " + encodeURIComponent(load) + "%0A" +
+      "Additional Information: " + encodeURIComponent(message);
 
     window.open(
       "https://wa.me/233257522922?text=" + text,
